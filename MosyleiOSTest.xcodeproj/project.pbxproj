@@ -1,0 +1,662 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		29F134E301469C16FFA8A031 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A916F83522ECEECAD033B656 /* Pods.framework */; };
+		B5241E251D418D8200B35284 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B5241E241D418D8200B35284 /* main.m */; };
+		B5241E281D418D8200B35284 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B5241E271D418D8200B35284 /* AppDelegate.m */; };
+		B5241E2B1D418D8200B35284 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B5241E2A1D418D8200B35284 /* ViewController.m */; };
+		B5241E2E1D418D8200B35284 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5241E2C1D418D8200B35284 /* Main.storyboard */; };
+		B5241E311D418D8200B35284 /* MosyleiOSTest.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B5241E2F1D418D8200B35284 /* MosyleiOSTest.xcdatamodeld */; };
+		B5241E331D418D8200B35284 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B5241E321D418D8200B35284 /* Assets.xcassets */; };
+		B5241E361D418D8200B35284 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B5241E341D418D8200B35284 /* LaunchScreen.storyboard */; };
+		B5241E411D418D8200B35284 /* MosyleiOSTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B5241E401D418D8200B35284 /* MosyleiOSTestTests.m */; };
+		B5241E4C1D418D8200B35284 /* MosyleiOSTestUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B5241E4B1D418D8200B35284 /* MosyleiOSTestUITests.m */; };
+		B5241F201D42A92B00B35284 /* Students+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B5241F151D42A92B00B35284 /* Students+CoreDataProperties.m */; };
+		B5241F211D42A92B00B35284 /* Students.m in Sources */ = {isa = PBXBuildFile; fileRef = B5241F171D42A92B00B35284 /* Students.m */; };
+		B5241F221D42A92B00B35284 /* Server+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B5241F191D42A92B00B35284 /* Server+CoreDataProperties.m */; };
+		B5241F231D42A92B00B35284 /* Server.m in Sources */ = {isa = PBXBuildFile; fileRef = B5241F1B1D42A92B00B35284 /* Server.m */; };
+		B5241F241D42A92B00B35284 /* Groups+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B5241F1D1D42A92B00B35284 /* Groups+CoreDataProperties.m */; };
+		B5241F251D42A92B00B35284 /* Groups.m in Sources */ = {isa = PBXBuildFile; fileRef = B5241F1F1D42A92B00B35284 /* Groups.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		B5241E3D1D418D8200B35284 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5241E181D418D8200B35284 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5241E1F1D418D8200B35284;
+			remoteInfo = MosyleiOSTest;
+		};
+		B5241E481D418D8200B35284 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B5241E181D418D8200B35284 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B5241E1F1D418D8200B35284;
+			remoteInfo = MosyleiOSTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1B0531B6DA72BD96717EEF2F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		2DE88601052393CEFA0959B4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		A916F83522ECEECAD033B656 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5241E201D418D8200B35284 /* MosyleiOSTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MosyleiOSTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5241E241D418D8200B35284 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		B5241E261D418D8200B35284 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		B5241E271D418D8200B35284 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		B5241E291D418D8200B35284 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		B5241E2A1D418D8200B35284 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		B5241E2D1D418D8200B35284 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		B5241E301D418D8200B35284 /* MosyleiOSTest.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MosyleiOSTest.xcdatamodel; sourceTree = "<group>"; };
+		B5241E321D418D8200B35284 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		B5241E351D418D8200B35284 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		B5241E371D418D8200B35284 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5241E3C1D418D8200B35284 /* MosyleiOSTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MosyleiOSTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5241E401D418D8200B35284 /* MosyleiOSTestTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MosyleiOSTestTests.m; sourceTree = "<group>"; };
+		B5241E421D418D8200B35284 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5241E471D418D8200B35284 /* MosyleiOSTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MosyleiOSTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B5241E4B1D418D8200B35284 /* MosyleiOSTestUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MosyleiOSTestUITests.m; sourceTree = "<group>"; };
+		B5241E4D1D418D8200B35284 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B5241F141D42A92B00B35284 /* Students+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Students+CoreDataProperties.h"; sourceTree = "<group>"; };
+		B5241F151D42A92B00B35284 /* Students+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Students+CoreDataProperties.m"; sourceTree = "<group>"; };
+		B5241F161D42A92B00B35284 /* Students.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Students.h; sourceTree = "<group>"; };
+		B5241F171D42A92B00B35284 /* Students.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Students.m; sourceTree = "<group>"; };
+		B5241F181D42A92B00B35284 /* Server+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Server+CoreDataProperties.h"; sourceTree = "<group>"; };
+		B5241F191D42A92B00B35284 /* Server+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Server+CoreDataProperties.m"; sourceTree = "<group>"; };
+		B5241F1A1D42A92B00B35284 /* Server.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Server.h; sourceTree = "<group>"; };
+		B5241F1B1D42A92B00B35284 /* Server.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Server.m; sourceTree = "<group>"; };
+		B5241F1C1D42A92B00B35284 /* Groups+CoreDataProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Groups+CoreDataProperties.h"; sourceTree = "<group>"; };
+		B5241F1D1D42A92B00B35284 /* Groups+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Groups+CoreDataProperties.m"; sourceTree = "<group>"; };
+		B5241F1E1D42A92B00B35284 /* Groups.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Groups.h; sourceTree = "<group>"; };
+		B5241F1F1D42A92B00B35284 /* Groups.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Groups.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		B5241E1D1D418D8200B35284 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				29F134E301469C16FFA8A031 /* Pods.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5241E391D418D8200B35284 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5241E441D418D8200B35284 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		68403BCCDEF261AC4098994F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				2DE88601052393CEFA0959B4 /* Pods.debug.xcconfig */,
+				1B0531B6DA72BD96717EEF2F /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		90F6A4A9761A249AFD6D8500 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A916F83522ECEECAD033B656 /* Pods.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B5241E171D418D8200B35284 = {
+			isa = PBXGroup;
+			children = (
+				B5241E221D418D8200B35284 /* MosyleiOSTest */,
+				B5241E3F1D418D8200B35284 /* MosyleiOSTestTests */,
+				B5241E4A1D418D8200B35284 /* MosyleiOSTestUITests */,
+				B5241E211D418D8200B35284 /* Products */,
+				68403BCCDEF261AC4098994F /* Pods */,
+				90F6A4A9761A249AFD6D8500 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		B5241E211D418D8200B35284 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B5241E201D418D8200B35284 /* MosyleiOSTest.app */,
+				B5241E3C1D418D8200B35284 /* MosyleiOSTestTests.xctest */,
+				B5241E471D418D8200B35284 /* MosyleiOSTestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B5241E221D418D8200B35284 /* MosyleiOSTest */ = {
+			isa = PBXGroup;
+			children = (
+				B5241E261D418D8200B35284 /* AppDelegate.h */,
+				B5241E271D418D8200B35284 /* AppDelegate.m */,
+				B5241E291D418D8200B35284 /* ViewController.h */,
+				B5241E2A1D418D8200B35284 /* ViewController.m */,
+				B5241E2C1D418D8200B35284 /* Main.storyboard */,
+				B5241E321D418D8200B35284 /* Assets.xcassets */,
+				B5241E341D418D8200B35284 /* LaunchScreen.storyboard */,
+				B5241E371D418D8200B35284 /* Info.plist */,
+				B5241E651D41D31400B35284 /* Core Data */,
+				B5241E231D418D8200B35284 /* Supporting Files */,
+			);
+			path = MosyleiOSTest;
+			sourceTree = "<group>";
+		};
+		B5241E231D418D8200B35284 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				B5241E241D418D8200B35284 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B5241E3F1D418D8200B35284 /* MosyleiOSTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				B5241E401D418D8200B35284 /* MosyleiOSTestTests.m */,
+				B5241E421D418D8200B35284 /* Info.plist */,
+			);
+			path = MosyleiOSTestTests;
+			sourceTree = "<group>";
+		};
+		B5241E4A1D418D8200B35284 /* MosyleiOSTestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				B5241E4B1D418D8200B35284 /* MosyleiOSTestUITests.m */,
+				B5241E4D1D418D8200B35284 /* Info.plist */,
+			);
+			path = MosyleiOSTestUITests;
+			sourceTree = "<group>";
+		};
+		B5241E651D41D31400B35284 /* Core Data */ = {
+			isa = PBXGroup;
+			children = (
+				B5241E2F1D418D8200B35284 /* MosyleiOSTest.xcdatamodeld */,
+				B5241F181D42A92B00B35284 /* Server+CoreDataProperties.h */,
+				B5241F191D42A92B00B35284 /* Server+CoreDataProperties.m */,
+				B5241F1A1D42A92B00B35284 /* Server.h */,
+				B5241F1B1D42A92B00B35284 /* Server.m */,
+				B5241F1C1D42A92B00B35284 /* Groups+CoreDataProperties.h */,
+				B5241F1D1D42A92B00B35284 /* Groups+CoreDataProperties.m */,
+				B5241F1E1D42A92B00B35284 /* Groups.h */,
+				B5241F1F1D42A92B00B35284 /* Groups.m */,
+				B5241F141D42A92B00B35284 /* Students+CoreDataProperties.h */,
+				B5241F151D42A92B00B35284 /* Students+CoreDataProperties.m */,
+				B5241F161D42A92B00B35284 /* Students.h */,
+				B5241F171D42A92B00B35284 /* Students.m */,
+			);
+			name = "Core Data";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		B5241E1F1D418D8200B35284 /* MosyleiOSTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5241E501D418D8200B35284 /* Build configuration list for PBXNativeTarget "MosyleiOSTest" */;
+			buildPhases = (
+				84DA04D1A71B591AA0CA4774 /* Check Pods Manifest.lock */,
+				B5241E1C1D418D8200B35284 /* Sources */,
+				B5241E1D1D418D8200B35284 /* Frameworks */,
+				B5241E1E1D418D8200B35284 /* Resources */,
+				42FD2915A4A1C49C9A211494 /* Embed Pods Frameworks */,
+				D39C792D03E1A620085507B6 /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MosyleiOSTest;
+			productName = MosyleiOSTest;
+			productReference = B5241E201D418D8200B35284 /* MosyleiOSTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		B5241E3B1D418D8200B35284 /* MosyleiOSTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5241E531D418D8200B35284 /* Build configuration list for PBXNativeTarget "MosyleiOSTestTests" */;
+			buildPhases = (
+				B5241E381D418D8200B35284 /* Sources */,
+				B5241E391D418D8200B35284 /* Frameworks */,
+				B5241E3A1D418D8200B35284 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5241E3E1D418D8200B35284 /* PBXTargetDependency */,
+			);
+			name = MosyleiOSTestTests;
+			productName = MosyleiOSTestTests;
+			productReference = B5241E3C1D418D8200B35284 /* MosyleiOSTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		B5241E461D418D8200B35284 /* MosyleiOSTestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B5241E561D418D8200B35284 /* Build configuration list for PBXNativeTarget "MosyleiOSTestUITests" */;
+			buildPhases = (
+				B5241E431D418D8200B35284 /* Sources */,
+				B5241E441D418D8200B35284 /* Frameworks */,
+				B5241E451D418D8200B35284 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B5241E491D418D8200B35284 /* PBXTargetDependency */,
+			);
+			name = MosyleiOSTestUITests;
+			productName = MosyleiOSTestUITests;
+			productReference = B5241E471D418D8200B35284 /* MosyleiOSTestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		B5241E181D418D8200B35284 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = gabrieltargon;
+				TargetAttributes = {
+					B5241E1F1D418D8200B35284 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					B5241E3B1D418D8200B35284 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = B5241E1F1D418D8200B35284;
+					};
+					B5241E461D418D8200B35284 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = B5241E1F1D418D8200B35284;
+					};
+				};
+			};
+			buildConfigurationList = B5241E1B1D418D8200B35284 /* Build configuration list for PBXProject "MosyleiOSTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = B5241E171D418D8200B35284;
+			productRefGroup = B5241E211D418D8200B35284 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				B5241E1F1D418D8200B35284 /* MosyleiOSTest */,
+				B5241E3B1D418D8200B35284 /* MosyleiOSTestTests */,
+				B5241E461D418D8200B35284 /* MosyleiOSTestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		B5241E1E1D418D8200B35284 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5241E361D418D8200B35284 /* LaunchScreen.storyboard in Resources */,
+				B5241E331D418D8200B35284 /* Assets.xcassets in Resources */,
+				B5241E2E1D418D8200B35284 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5241E3A1D418D8200B35284 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5241E451D418D8200B35284 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		42FD2915A4A1C49C9A211494 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		84DA04D1A71B591AA0CA4774 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D39C792D03E1A620085507B6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		B5241E1C1D418D8200B35284 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5241E2B1D418D8200B35284 /* ViewController.m in Sources */,
+				B5241F201D42A92B00B35284 /* Students+CoreDataProperties.m in Sources */,
+				B5241F231D42A92B00B35284 /* Server.m in Sources */,
+				B5241F251D42A92B00B35284 /* Groups.m in Sources */,
+				B5241F221D42A92B00B35284 /* Server+CoreDataProperties.m in Sources */,
+				B5241E281D418D8200B35284 /* AppDelegate.m in Sources */,
+				B5241F241D42A92B00B35284 /* Groups+CoreDataProperties.m in Sources */,
+				B5241E311D418D8200B35284 /* MosyleiOSTest.xcdatamodeld in Sources */,
+				B5241E251D418D8200B35284 /* main.m in Sources */,
+				B5241F211D42A92B00B35284 /* Students.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5241E381D418D8200B35284 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5241E411D418D8200B35284 /* MosyleiOSTestTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B5241E431D418D8200B35284 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B5241E4C1D418D8200B35284 /* MosyleiOSTestUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B5241E3E1D418D8200B35284 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5241E1F1D418D8200B35284 /* MosyleiOSTest */;
+			targetProxy = B5241E3D1D418D8200B35284 /* PBXContainerItemProxy */;
+		};
+		B5241E491D418D8200B35284 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B5241E1F1D418D8200B35284 /* MosyleiOSTest */;
+			targetProxy = B5241E481D418D8200B35284 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		B5241E2C1D418D8200B35284 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5241E2D1D418D8200B35284 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		B5241E341D418D8200B35284 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				B5241E351D418D8200B35284 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		B5241E4E1D418D8200B35284 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		B5241E4F1D418D8200B35284 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		B5241E511D418D8200B35284 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2DE88601052393CEFA0959B4 /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				INFOPLIST_FILE = MosyleiOSTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.gabrieltargon.MosyleiOSTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		B5241E521D418D8200B35284 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B0531B6DA72BD96717EEF2F /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				INFOPLIST_FILE = MosyleiOSTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.gabrieltargon.MosyleiOSTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		B5241E541D418D8200B35284 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MosyleiOSTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.gabrieltargon.MosyleiOSTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MosyleiOSTest.app/MosyleiOSTest";
+			};
+			name = Debug;
+		};
+		B5241E551D418D8200B35284 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = MosyleiOSTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.gabrieltargon.MosyleiOSTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MosyleiOSTest.app/MosyleiOSTest";
+			};
+			name = Release;
+		};
+		B5241E571D418D8200B35284 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MosyleiOSTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.gabrieltargon.MosyleiOSTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MosyleiOSTest;
+			};
+			name = Debug;
+		};
+		B5241E581D418D8200B35284 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = MosyleiOSTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = org.gabrieltargon.MosyleiOSTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = MosyleiOSTest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		B5241E1B1D418D8200B35284 /* Build configuration list for PBXProject "MosyleiOSTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5241E4E1D418D8200B35284 /* Debug */,
+				B5241E4F1D418D8200B35284 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5241E501D418D8200B35284 /* Build configuration list for PBXNativeTarget "MosyleiOSTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5241E511D418D8200B35284 /* Debug */,
+				B5241E521D418D8200B35284 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5241E531D418D8200B35284 /* Build configuration list for PBXNativeTarget "MosyleiOSTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5241E541D418D8200B35284 /* Debug */,
+				B5241E551D418D8200B35284 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B5241E561D418D8200B35284 /* Build configuration list for PBXNativeTarget "MosyleiOSTestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B5241E571D418D8200B35284 /* Debug */,
+				B5241E581D418D8200B35284 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		B5241E2F1D418D8200B35284 /* MosyleiOSTest.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				B5241E301D418D8200B35284 /* MosyleiOSTest.xcdatamodel */,
+			);
+			currentVersion = B5241E301D418D8200B35284 /* MosyleiOSTest.xcdatamodel */;
+			path = MosyleiOSTest.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = B5241E181D418D8200B35284 /* Project object */;
+}

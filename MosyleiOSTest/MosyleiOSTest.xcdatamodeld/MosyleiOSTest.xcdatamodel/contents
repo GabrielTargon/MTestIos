@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model userDefinedModelVersionIdentifier="" type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="10174" systemVersion="15F34" minimumToolsVersion="Automatic">
+    <entity name="Groups" representedClassName="Groups" syncable="YES">
+        <attribute name="group_id" attributeType="Integer 16" defaultValueString="0" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="id"/>
+            </userInfo>
+        </attribute>
+        <attribute name="group_is_active" attributeType="Boolean" syncable="YES"/>
+        <attribute name="group_name" attributeType="String" syncable="YES"/>
+        <attribute name="group_status" attributeType="String" syncable="YES"/>
+        <relationship name="server" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Server" inverseName="groups" inverseEntity="Server" syncable="YES"/>
+        <relationship name="students" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Students" inverseName="groups" inverseEntity="Students" syncable="YES"/>
+    </entity>
+    <entity name="Server" representedClassName="Server" syncable="YES">
+        <attribute name="status" attributeType="String" syncable="YES"/>
+        <relationship name="groups" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Groups" inverseName="server" inverseEntity="Groups" syncable="YES"/>
+    </entity>
+    <entity name="Students" representedClassName="Students" syncable="YES">
+        <attribute name="student_id" attributeType="Integer 16" defaultValueString="0" syncable="YES">
+            <userInfo>
+                <entry key="JSONKeyPath" value="id"/>
+            </userInfo>
+        </attribute>
+        <attribute name="student_name" attributeType="String" syncable="YES"/>
+        <attribute name="student_photo" attributeType="String" syncable="YES"/>
+        <relationship name="groups" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Groups" inverseName="students" inverseEntity="Groups" syncable="YES"/>
+    </entity>
+    <elements>
+        <element name="Groups" positionX="-290" positionY="45" width="128" height="133"/>
+        <element name="Students" positionX="-81" positionY="72" width="128" height="103"/>
+        <element name="Server" positionX="-488" positionY="51" width="128" height="73"/>
+    </elements>
+</model>
