@@ -10,4 +10,7 @@
 
 @interface ExpandableTableView : UITableView
 
+@property (nonatomic, assign) int initiallyExpandedSection;
+@property (nonatomic, assign) BOOL allHeadersInitiallyCollapsed;
+
 @end

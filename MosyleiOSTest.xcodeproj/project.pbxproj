@@ -23,6 +23,9 @@
 		B5241F231D42A92B00B35284 /* Server.m in Sources */ = {isa = PBXBuildFile; fileRef = B5241F1B1D42A92B00B35284 /* Server.m */; };
 		B5241F241D42A92B00B35284 /* Groups+CoreDataProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = B5241F1D1D42A92B00B35284 /* Groups+CoreDataProperties.m */; };
 		B5241F251D42A92B00B35284 /* Groups.m in Sources */ = {isa = PBXBuildFile; fileRef = B5241F1F1D42A92B00B35284 /* Groups.m */; };
+		B5241F281D4305B200B35284 /* HeaderTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5241F271D4305B200B35284 /* HeaderTableViewCell.m */; };
+		B5241F2C1D430A0F00B35284 /* ExpandableTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = B5241F2B1D430A0F00B35284 /* ExpandableTableView.m */; };
+		B5241F2F1D43114D00B35284 /* CellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = B5241F2E1D43114D00B35284 /* CellTableViewCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +78,12 @@
 		B5241F1D1D42A92B00B35284 /* Groups+CoreDataProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Groups+CoreDataProperties.m"; sourceTree = "<group>"; };
 		B5241F1E1D42A92B00B35284 /* Groups.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Groups.h; sourceTree = "<group>"; };
 		B5241F1F1D42A92B00B35284 /* Groups.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Groups.m; sourceTree = "<group>"; };
+		B5241F261D4305B200B35284 /* HeaderTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderTableViewCell.h; sourceTree = "<group>"; };
+		B5241F271D4305B200B35284 /* HeaderTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderTableViewCell.m; sourceTree = "<group>"; };
+		B5241F2A1D430A0F00B35284 /* ExpandableTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ExpandableTableView.h; sourceTree = "<group>"; };
+		B5241F2B1D430A0F00B35284 /* ExpandableTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ExpandableTableView.m; sourceTree = "<group>"; };
+		B5241F2D1D43114D00B35284 /* CellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CellTableViewCell.h; sourceTree = "<group>"; };
+		B5241F2E1D43114D00B35284 /* CellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CellTableViewCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -153,6 +162,7 @@
 				B5241E321D418D8200B35284 /* Assets.xcassets */,
 				B5241E341D418D8200B35284 /* LaunchScreen.storyboard */,
 				B5241E371D418D8200B35284 /* Info.plist */,
+				B5241F291D4309CE00B35284 /* ExpandableTableView */,
 				B5241E651D41D31400B35284 /* Core Data */,
 				B5241E231D418D8200B35284 /* Supporting Files */,
 			);
@@ -203,6 +213,19 @@
 				B5241F171D42A92B00B35284 /* Students.m */,
 			);
 			name = "Core Data";
+			sourceTree = "<group>";
+		};
+		B5241F291D4309CE00B35284 /* ExpandableTableView */ = {
+			isa = PBXGroup;
+			children = (
+				B5241F2A1D430A0F00B35284 /* ExpandableTableView.h */,
+				B5241F2B1D430A0F00B35284 /* ExpandableTableView.m */,
+				B5241F261D4305B200B35284 /* HeaderTableViewCell.h */,
+				B5241F271D4305B200B35284 /* HeaderTableViewCell.m */,
+				B5241F2D1D43114D00B35284 /* CellTableViewCell.h */,
+				B5241F2E1D43114D00B35284 /* CellTableViewCell.m */,
+			);
+			name = ExpandableTableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -390,12 +413,15 @@
 				B5241F201D42A92B00B35284 /* Students+CoreDataProperties.m in Sources */,
 				B5241F231D42A92B00B35284 /* Server.m in Sources */,
 				B5241F251D42A92B00B35284 /* Groups.m in Sources */,
+				B5241F281D4305B200B35284 /* HeaderTableViewCell.m in Sources */,
 				B5241F221D42A92B00B35284 /* Server+CoreDataProperties.m in Sources */,
 				B5241E281D418D8200B35284 /* AppDelegate.m in Sources */,
+				B5241F2C1D430A0F00B35284 /* ExpandableTableView.m in Sources */,
 				B5241F241D42A92B00B35284 /* Groups+CoreDataProperties.m in Sources */,
 				B5241E311D418D8200B35284 /* MosyleiOSTest.xcdatamodeld in Sources */,
 				B5241E251D418D8200B35284 /* main.m in Sources */,
 				B5241F211D42A92B00B35284 /* Students.m in Sources */,
+				B5241F2F1D43114D00B35284 /* CellTableViewCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
