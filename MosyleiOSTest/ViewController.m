@@ -21,7 +21,6 @@
 
 @property NSArray *server;
 @property NSArray *groups;
-@property NSArray *fetchedObjectsGroups;
 
 @end
 
@@ -80,19 +79,6 @@
     return 44;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    //Order array alphabetical
-    NSSortDescriptor *sort = [[NSSortDescriptor alloc]initWithKey:@"student_name"
-                                                        ascending:YES
-                                                         selector:@selector(localizedStandardCompare:)];
-    self.groups = [self.groups sortedArrayUsingDescriptors:@[sort]];
-    
-    CellTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
-    Students *studentsList = self.groups[indexPath.row];
-    cell.textLabel.text = studentsList.student_name;
-    return cell;
-}
-
 #pragma mark - UITableViewDelegate
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
@@ -109,8 +95,18 @@
     return headerCell;
 }
 
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    NSLog(@"section-%ld, row-%ld", (long)indexPath.section, (long)indexPath.row);
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    //Order array alphabetical
+    NSSortDescriptor *sort = [[NSSortDescriptor alloc]initWithKey:@"student_name"
+                                                        ascending:YES
+                                                         selector:@selector(localizedStandardCompare:)];
+    self.groups = [self.groups sortedArrayUsingDescriptors:@[sort]];
+    
+    CellTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
+    Students *studentsList = self.groups[indexPath.row];
+    cell.titleCell.text = studentsList.student_name;
+    
+    return cell;
 }
 
 #pragma mark - RESTKit
@@ -158,12 +154,12 @@
                                                                      selector:@selector(localizedStandardCompare:)];
     fetchRequestGroups.sortDescriptors = @[descriptorGroups];
     NSError *errorGroups = nil;
-    self.fetchedObjectsGroups = [contextGroups executeFetchRequest:fetchRequestGroups
+    NSArray *fetchedObjectsGroups = [contextGroups executeFetchRequest:fetchRequestGroups
                                                                  error:&errorGroups];
-
-    Groups *groupList = [self.fetchedObjectsGroups firstObject];
+    
+    Groups *groupList = [fetchedObjectsGroups firstObject];
     self.groups = [groupList.students allObjects];
-    NSLog(@"%@", self.groups);
+//    NSLog(@"%@", self.groups);
 
     [self.tableView reloadData];
 }
