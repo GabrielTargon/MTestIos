@@ -21,6 +21,7 @@
 
 @property NSArray *server;
 @property NSArray *groups;
+@property NSArray *fetchedObjectsGroups;
 
 @end
 
@@ -32,11 +33,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    
-//    [self requestURL];
     [self requestData];
-    
     
     self.refreshControl = [[UIRefreshControl alloc] init];
     [self.refreshControl addTarget:self
@@ -52,22 +49,22 @@
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-    if (self.server != 0) {
+//    if (self.server != 0) {
         return [self.server count];
-    } else {
-        // Display a message when the table is empty
-        UILabel *messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
-        
-        messageLabel.text = @"No data is currently available. Please pull down to refresh.";
-        messageLabel.textColor = [UIColor blackColor];
-        messageLabel.numberOfLines = 0;
-        messageLabel.textAlignment = NSTextAlignmentCenter;
-        [messageLabel sizeToFit];
-        
-        self.tableView.backgroundView = messageLabel;
-        self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-        return 0;
-    }
+//    } else {
+//        // Display a message when the table is empty
+//        UILabel *messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
+//        
+//        messageLabel.text = @"No data is currently available. Please pull down to refresh.";
+//        messageLabel.textColor = [UIColor blackColor];
+//        messageLabel.numberOfLines = 0;
+//        messageLabel.textAlignment = NSTextAlignmentCenter;
+//        [messageLabel sizeToFit];
+//        
+//        self.tableView.backgroundView = messageLabel;
+//        self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+//        return 0;
+//    }
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -81,14 +78,8 @@
 
 #pragma mark - UITableViewDelegate
 
-- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
-    //Order array alphabetical
-    NSSortDescriptor *sort = [[NSSortDescriptor alloc]initWithKey:@"group_name"
-                                                        ascending:YES
-                                                         selector:@selector(localizedStandardCompare:)];
-    self.server = [self.server sortedArrayUsingDescriptors:@[sort]];
-    
-    HeaderTableViewCell* headerCell = [tableView dequeueReusableCellWithIdentifier:@"HeaderCell"];
+- (UITableViewCell *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    HeaderTableViewCell *headerCell = [tableView dequeueReusableCellWithIdentifier:@"HeaderCell"];
     Groups *groupsList = self.server[section];
     headerCell.titleHeader.text = groupsList.group_name;
     
@@ -96,11 +87,14 @@
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    //Order array alphabetical
-    NSSortDescriptor *sort = [[NSSortDescriptor alloc]initWithKey:@"student_name"
-                                                        ascending:YES
-                                                         selector:@selector(localizedStandardCompare:)];
-    self.groups = [self.groups sortedArrayUsingDescriptors:@[sort]];
+    //Fetch all students objects
+    Groups *groupList = [self.fetchedObjectsGroups objectAtIndex:indexPath.section];
+    self.groups = [groupList.students allObjects];
+    //Order alphabetical
+    NSSortDescriptor *sortGroups = [[NSSortDescriptor alloc]initWithKey:@"student_name"
+                                                              ascending:YES
+                                                               selector:@selector(localizedStandardCompare:)];
+    self.groups = [self.groups sortedArrayUsingDescriptors:@[sortGroups]];
     
     CellTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"Cell" forIndexPath:indexPath];
     Students *studentsList = self.groups[indexPath.row];
@@ -122,6 +116,9 @@
          //Groups have been saved in core data by now
          [self fetchGroupsFromContext];
          [self.refreshControl endRefreshing];
+         [self.tableView reloadData];
+         
+         
      }
      failure: ^(RKObjectRequestOperation *operation, NSError *error) {
          RKLogError(@"Load failed with error: %@", error);
@@ -135,16 +132,18 @@
     //SERVER
     NSManagedObjectContext *contextServer = [RKManagedObjectStore defaultStore].mainQueueManagedObjectContext;
     NSFetchRequest *fetchRequestServer = [NSFetchRequest fetchRequestWithEntityName:@"Server"];
-    NSSortDescriptor *descriptorServer = [[NSSortDescriptor alloc]initWithKey:@"status"
-                                                                    ascending:YES
-                                                                     selector:@selector(localizedStandardCompare:)];
-    fetchRequestServer.sortDescriptors = @[descriptorServer];
     NSError *errorServer = nil;
     NSArray *fetchedObjectsServer = [contextServer executeFetchRequest:fetchRequestServer
                                                                  error:&errorServer];
 
     Server *serverList = [fetchedObjectsServer firstObject];
     self.server = [serverList.groups allObjects];
+    //Order alphabetical
+    NSSortDescriptor *sortServer = [[NSSortDescriptor alloc]initWithKey:@"group_name"
+                                                        ascending:YES
+                                                         selector:@selector(localizedStandardCompare:)];
+    self.server = [self.server sortedArrayUsingDescriptors:@[sortServer]];
+    
     
     //GROUPS
     NSManagedObjectContext *contextGroups = [RKManagedObjectStore defaultStore].mainQueueManagedObjectContext;
@@ -154,14 +153,11 @@
                                                                      selector:@selector(localizedStandardCompare:)];
     fetchRequestGroups.sortDescriptors = @[descriptorGroups];
     NSError *errorGroups = nil;
-    NSArray *fetchedObjectsGroups = [contextGroups executeFetchRequest:fetchRequestGroups
+    self.fetchedObjectsGroups = [contextGroups executeFetchRequest:fetchRequestGroups
                                                                  error:&errorGroups];
     
-    Groups *groupList = [fetchedObjectsGroups firstObject];
+    Groups *groupList = [self.fetchedObjectsGroups firstObject];
     self.groups = [groupList.students allObjects];
-//    NSLog(@"%@", self.groups);
-
-    [self.tableView reloadData];
 }
 
 @end

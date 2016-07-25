@@ -6,7 +6,7 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--GroupActivity-->
         <scene sceneID="EYE-9T-okX">
             <objects>
                 <tableViewController id="Nr5-O2-111" customClass="ViewController" sceneMemberID="viewController">
@@ -101,7 +101,7 @@
                             <outlet property="delegate" destination="Nr5-O2-111" id="rev-Ks-JJW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="B8z-Iv-tl5"/>
+                    <navigationItem key="navigationItem" title="GroupActivity" id="B8z-Iv-tl5"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wYS-KH-wDd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
