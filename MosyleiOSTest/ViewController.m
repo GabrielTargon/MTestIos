@@ -49,22 +49,7 @@
 #pragma mark - Table View
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
-//    if (self.server != 0) {
-        return [self.server count];
-//    } else {
-//        // Display a message when the table is empty
-//        UILabel *messageLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, self.view.bounds.size.width, self.view.bounds.size.height)];
-//        
-//        messageLabel.text = @"No data is currently available. Please pull down to refresh.";
-//        messageLabel.textColor = [UIColor blackColor];
-//        messageLabel.numberOfLines = 0;
-//        messageLabel.textAlignment = NSTextAlignmentCenter;
-//        [messageLabel sizeToFit];
-//        
-//        self.tableView.backgroundView = messageLabel;
-//        self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-//        return 0;
-//    }
+    return [self.server count];
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
@@ -82,6 +67,19 @@
     HeaderTableViewCell *headerCell = [tableView dequeueReusableCellWithIdentifier:@"HeaderCell"];
     Groups *groupsList = self.server[section];
     headerCell.titleHeader.text = groupsList.group_name;
+    
+    if ([groupsList.group_status isEqualToString:@"FINISHED"]) {
+        headerCell.imageHeader.image = [UIImage imageNamed:@"group-finished"];
+    }
+    else if ([groupsList.group_status isEqualToString:@"IN_PROGRESS"]) {
+        headerCell.imageHeader.image = [UIImage imageNamed:@"group-progress"];
+    }
+    else if ([groupsList.group_status isEqualToString:@"NO_MESSAGES"]) {
+        headerCell.imageHeader.image = [UIImage imageNamed:@"group-not-started"];
+    }
+    else {
+        headerCell.imageHeader.image = [UIImage imageNamed:@"group-not-started"];
+    }
     
     return headerCell;
 }
@@ -117,14 +115,11 @@
          [self fetchGroupsFromContext];
          [self.refreshControl endRefreshing];
          [self.tableView reloadData];
-         
-         
      }
      failure: ^(RKObjectRequestOperation *operation, NSError *error) {
          RKLogError(@"Load failed with error: %@", error);
      }
      ];
-    
 }
 
 - (void)fetchGroupsFromContext {

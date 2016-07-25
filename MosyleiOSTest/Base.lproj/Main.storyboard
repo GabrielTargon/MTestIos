@@ -22,7 +22,7 @@
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="group-finished" translatesAutoresizingMaskIntoConstraints="NO" id="ENI-yY-yQC">
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ENI-yY-yQC">
                                             <rect key="frame" x="8" y="2" width="40" height="40"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="40" id="wTv-mK-gDg"/>
@@ -129,6 +129,5 @@
     <resources>
         <image name="arrow-down" width="36" height="36"/>
         <image name="filter-all" width="26" height="26"/>
-        <image name="group-finished" width="36" height="36"/>
     </resources>
 </document>
