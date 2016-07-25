@@ -1,7 +1,4 @@
 PODS:
-  - Groot (1.2):
-    - Groot/Swift (= 1.2)
-  - Groot/Swift (1.2)
   - ISO8601DateFormatterValueTransformer (0.6.1):
     - RKValueTransformers (~> 1.1.0)
   - RestKit (0.27.0):
@@ -27,11 +24,9 @@ PODS:
   - TransitionKit (2.2.1)
 
 DEPENDENCIES:
-  - Groot
   - RestKit (~> 0.27)
 
 SPEC CHECKSUMS:
-  Groot: 86c2c820d619f18586b2d1dcfd90e908339f00bc
   ISO8601DateFormatterValueTransformer: 52da467d6ec899d6aedda8e48280ac92e8ee97e6
   RestKit: a0244db34e14ed9cf059fcee2be6733cc162c34a
   RKValueTransformers: e5ed67e3811229b616fe01bddeeafe3bb337b1b9

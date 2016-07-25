@@ -84,7 +84,6 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods/Groot.framework"
   install_framework "Pods/ISO8601DateFormatterValueTransformer.framework"
   install_framework "Pods/RKValueTransformers.framework"
   install_framework "Pods/RestKit.framework"
@@ -92,7 +91,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods/TransitionKit.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods/Groot.framework"
   install_framework "Pods/ISO8601DateFormatterValueTransformer.framework"
   install_framework "Pods/RKValueTransformers.framework"
   install_framework "Pods/RestKit.framework"
