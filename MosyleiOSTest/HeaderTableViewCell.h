@@ -14,9 +14,4 @@
 @property (weak, nonatomic) IBOutlet UIImageView *imageHeader;
 @property (weak, nonatomic) IBOutlet UIButton *buttonHeader;
 
-@property (nonatomic, readonly) NSInteger section;
-@property (nonatomic, readonly) NSInteger totalRows;
-
-- (void)updateWithTitle:(NSString *)title isCollapsed:(BOOL)isCollapsed totalRows:(NSInteger)row andSection:(NSInteger)section;
-
 @end

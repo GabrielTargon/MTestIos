@@ -33,7 +33,10 @@
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="36" id="TAd-yJ-Rs4"/>
                                             </constraints>
-                                            <state key="normal" image="arrow-down"/>
+                                            <state key="normal" image="arrow-up"/>
+                                            <connections>
+                                                <action selector="didTapHeader:" destination="KFu-tV-bSU" eventType="touchUpInside" id="YBf-zr-gEf"/>
+                                            </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Header" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8C-JR-79x">
                                             <rect key="frame" x="56" y="11" width="482" height="21"/>
@@ -101,7 +104,15 @@
                             <outlet property="delegate" destination="Nr5-O2-111" id="rev-Ks-JJW"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="GroupActivity" id="B8z-Iv-tl5"/>
+                    <navigationItem key="navigationItem" title="GroupActivity" id="B8z-Iv-tl5">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="Iv5-MH-Daa">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="KRM-sD-ans">
+                                <rect key="frame" x="554" y="9" width="26" height="26"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="filter-all"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wYS-KH-wDd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -127,7 +138,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="arrow-down" width="36" height="36"/>
+        <image name="arrow-up" width="36" height="36"/>
         <image name="filter-all" width="26" height="26"/>
     </resources>
 </document>

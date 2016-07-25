@@ -68,6 +68,7 @@
     Groups *groupsList = self.server[section];
     headerCell.titleHeader.text = groupsList.group_name;
     
+    //Set image for each section
     if ([groupsList.group_status isEqualToString:@"FINISHED"]) {
         headerCell.imageHeader.image = [UIImage imageNamed:@"group-finished"];
     }
@@ -88,6 +89,7 @@
     //Fetch all students objects
     Groups *groupList = [self.fetchedObjectsGroups objectAtIndex:indexPath.section];
     self.groups = [groupList.students allObjects];
+    
     //Order alphabetical
     NSSortDescriptor *sortGroups = [[NSSortDescriptor alloc]initWithKey:@"student_name"
                                                               ascending:YES
@@ -138,7 +140,6 @@
                                                         ascending:YES
                                                          selector:@selector(localizedStandardCompare:)];
     self.server = [self.server sortedArrayUsingDescriptors:@[sortServer]];
-    
     
     //GROUPS
     NSManagedObjectContext *contextGroups = [RKManagedObjectStore defaultStore].mainQueueManagedObjectContext;
